@@ -18,4 +18,14 @@ public class GlobalExceptionHandler {
                 .isSuccessful(false)
                 .build(), HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(BookCatalogException.class)
+    public ResponseEntity<ApiResponse> bookCatalogException(BookCatalogException bookCatalogException){
+        return new ResponseEntity<>(ApiResponse.builder()
+                .data(bookCatalogException.getMessage())
+                .httpStatus(HttpStatus.BAD_REQUEST)
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .isSuccessful(false)
+                .build(), HttpStatus.BAD_REQUEST);
+    }
 }

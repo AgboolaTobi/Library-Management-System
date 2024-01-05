@@ -1,5 +1,6 @@
 package com.SemicolonLibrarySystem.SemicolonLibrary.data.models;
 
+import com.SemicolonLibrarySystem.SemicolonLibrary.data.enums.BookCategory;
 import jakarta.persistence.*;
 import lombok.*;
 

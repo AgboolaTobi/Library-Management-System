@@ -6,7 +6,6 @@ public enum BookCategory {
     ARTS,
     HUMANITY,
     PSYCOLOGY,
-    MUSIC,
-
+    MUSIC
 
 }
