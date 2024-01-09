@@ -18,6 +18,6 @@ public class Desk {
     private Long id;
     private LocalDateTime borrowedAt;
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Book> bookRequest;
+    private List<Book> listOfBooks;
 
 }

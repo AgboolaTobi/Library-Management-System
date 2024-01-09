@@ -28,4 +28,23 @@ public class GlobalExceptionHandler {
                 .isSuccessful(false)
                 .build(), HttpStatus.BAD_REQUEST);
     }
+    @ExceptionHandler(UserRegistrationException.class)
+    public ResponseEntity<ApiResponse> userRegistrationException(UserRegistrationException userRegistrationException){
+        return new ResponseEntity<>(ApiResponse.builder()
+                .data(userRegistrationException.getMessage())
+                .httpStatus(HttpStatus.BAD_REQUEST)
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .isSuccessful(false)
+                .build(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(BookCreationException.class)
+    public ResponseEntity<ApiResponse> bookCreationException(BookCreationException bookCreationException){
+        return new ResponseEntity<>(ApiResponse.builder()
+                .data(bookCreationException.getMessage())
+                .httpStatus(HttpStatus.BAD_REQUEST)
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .isSuccessful(false)
+                .build(), HttpStatus.BAD_REQUEST);
+    }
 }

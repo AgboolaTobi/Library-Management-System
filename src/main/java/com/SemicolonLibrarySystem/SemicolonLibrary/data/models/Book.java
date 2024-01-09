@@ -16,6 +16,7 @@ public class Book {
     private Long id;
     private String bookName;
     private String bookNumber;
+    private int quantity;
     @Enumerated(EnumType.STRING)
     private BookCategory bookCategory;
 
